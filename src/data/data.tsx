@@ -8,7 +8,6 @@ import {
 } from '@heroicons/react/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import heroImage from '../images/header-background.webp';
 import profilepic from '../images/profilepic.jpg';
@@ -65,8 +64,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a London based <strong className="text-stone-100">Undergraduate Computer Science student</strong> at <strong className="text-stone-100">Lancaster University</strong>, on track
-        to graduate with a first.
+        I'm a London-based <strong className="text-stone-100">software developer</strong> in global tax.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
       </p>
@@ -92,15 +90,14 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Final-year Computer Science student (Lancaster University, First Class expected) with a strong academic 
-  foundation and proven ability to learn quickly and apply knowledge effectively.  Experienced in React, Java, C#, SQL 
-  & more, with a demonstrated ability to deliver high-quality results in academic projects. Successfully contributed 
-  to a large-scale project for a multinational client at Aethersys, showcasing strong teamwork and technical skills. 
-  Eager to transition my skills and passion for learning to a professional career, seeking a graduate software 
-  development role in London where I can contribute to innovative solutions and continue to grow as a developer.`,
+  description: `A driven Computer Science graduate from Lancaster University (First-Class Honours), 
+  currently working in the payroll division of a global tax software company. I have a strong interest 
+  in full-stack development and a growing understanding of real-world software solutions in complex, 
+  high-stakes environments. I thrive in collaborative teams, adapt quickly to new challenges, and 
+  consistently aim to deliver high-quality, impactful work.`,
   aboutItems: [
     {label: 'Location', text: 'London, UK', Icon: MapIcon},
-    {label: 'Age', text: '20', Icon: CalendarIcon},
+    {label: 'Age', text: '21', Icon: CalendarIcon},
     {label: 'Nationality', text: 'British / Cypriot', Icon: FlagIcon},
     {label: 'Interests', text: 'Traveling, Cycling, Film, Music', Icon: SparklesIcon},
     {label: 'Study', text: 'Lancaster University', Icon: AcademicCapIcon},
@@ -130,11 +127,11 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 7,
+        level: 8,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 8,
       },
       {
         name: 'HTML',
@@ -142,7 +139,7 @@ export const skills: SkillGroup[] = [
       },
 	{
         name: 'CSS (Tailwind, Standard)',
-        level: 7,
+        level: 8,
       },
     ],
   },
@@ -151,19 +148,19 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Java',
-        level: 8,
+        level: 7,
       },
       {
         name: 'Python',
-        level: 8,
+        level: 7,
       },
 	{
         name: 'C',
-        level: 6,
+        level: 5,
       },
       {
         name: 'C#',
-        level: 5,
+        level: 9,
       },
       	{
         name: 'SQL (SQLite, MSSQL)',
@@ -195,11 +192,10 @@ export const education: TimelineItemValue[] = [
     title: 'BSc (Hons) Computer Science',
     content: (
     <>
-      <p>Grade: Part I: 1:1, Part II: Currently 1:1 (First)</p>
+      <p>I have recently completed the final year of a three-year Computer Science course. Additionally, took a Part I minor in Accounting & Finance. I am proud to say that I have achieved a first-class degree.</p>
       <p>Activities and societies: Film Society, part-time work as Teaching Assistant</p>
-      <p>Now in the final year of a three-year Computer Science course. Additionally, took a Part I minor in Accounting & Finance. I am currently on track for a first.</p>
-      <p>Some notable projects include:</p>
       <ul className="list-disc list-inside indent-0.5">
+        <li>Using AI to classify network traffic was my dissertation project. I used Python and trained a number of machine learning models on encrypted network traffic data, tweaking use of layers, optimisers, and using schedulers to reduce learning speed as the model trains which helps increase its accuracy. I evaluated the results and determined that out of the models (MLP, Decision Tree, Random Forest, KNN & SVM), the mutli-layer perceptron performs best due to its tuning and layer choices allowing it to identify more complex relationships with low correlation data. Network traffic classification is useful to help many different organisations, for example, internet service providers for QoS by prioritising traffic, reducing latency, and avoiding congestion on the network.</li>
         <li>A program in C to read and interpret data from a raw FAT16 image, displaying internal folders and reading files. I created a custom file-handler that assigns descriptors to the files in the image. (Received 100% [A+])</li>
         <li>A group project in Java to create a Pixel-Based Graphics Editor, using key programming principles such as extensibility to make a highly functional and robust program. We utilise the Git version control system with a topic-branch Git workflow. (received A, A+ and A on three parts of project)</li>
       </ul>
@@ -222,6 +218,35 @@ export const education: TimelineItemValue[] = [
 ];
 
 export const experience: TimelineItemValue[] = [
+  {
+    date: 'Aug 2024 - Present',
+    location: 'Aethersys, London, UK',
+    title: 'Software Analyst (A1)',
+    content: (
+      <>
+        <p>
+          On the payroll team working on the development of global tax software. 
+        </p>
+        <p>Create and improve new technology solutions to improve the ways that clients complete their payroll process, supporting clients in automating payroll-related tax processes.</p>
+        <p>
+          Contribute to the design, testing, and enhancement of solutions that integrate payroll data with equity compensation. 
+        </p>
+        <p>
+          Work closely with clients to ensure software solutions support them as best as possible. 
+        </p>
+        <br />
+        <ul className="list-disc indent-0.5 list-inside">
+          <li>Implemented a way for clients to generate company-tailored demographics files</li>
+          <li>Created logic to locate and match compensation from prior pay periods and allow clients to see how an employee's pay has changed over time</li>
+          <li>Added a way for clients to bulk import data into the software via zip upload</li>
+          <li>Reworked the data requests system, creating new, easier to use pages and backend logic, allowing clients to create data requests and gather employee compensation data from vendors</li>
+          <li>Resolved large-scale bugs, including concurrency issues affecting important environments, fixing issues with recurring jobs, and reworking how pay periods are created to prevent infinite loops,
+             adjust for non-calendar tax years, and improve the code-base for easier readability and maintainability.</li>
+          <li>Improving the ways that clients can generate reports by making a more complex set of filters available which allows clients to narrow down the data that they require much more easily</li>
+        </ul>
+      </>
+    ),
+  }, 
   {
     date: 'Oct 2022 - Apr 2024',
     location: 'Lancaster University, Lancaster, UK',
@@ -335,11 +360,11 @@ export const contact: ContactSection = {
       text: 'London, UK',
       href: '',
     },
-    {
-      type: ContactType.Instagram,
-      text: '@harrymi03',
-      href: 'https://www.instagram.com/harrymi03/',
-    },
+    // {
+    //   type: ContactType.Instagram,
+    //   text: '@harrymi03',
+    //   href: 'https://www.instagram.com/harrymi03/',
+    // },
     {
       type: ContactType.Github,
       text: 'Thrilla1',
@@ -355,5 +380,5 @@ export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Thrilla1'},
   /*{label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},*/
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/harry-iacovou/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/harrymi03/'},
+  //{label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/harrymi03/'},
 ];
